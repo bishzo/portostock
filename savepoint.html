@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAVEPOINT — Case Study · Zoru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="case.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__mark">./zoru</a>
+      <div class="nav__center">
+        <span class="nav__date" id="nav-date"></span>
+      </div>
+      <ul class="nav__links" style="margin-left: auto">
+        <li><a href="about.html" class="nav__link">Profile & Work</a></li>
+        <li>
+          <a href="about.html#contact" class="nav__link nav__link--hi"
+            >Say hi ↗</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ═══ HERO MOCKUP ═══ -->
+    <div class="cs-hero" data-reveal>
+      <div class="cs-hero__eyebrow">
+        <a href="about.html" class="cs-hero__back">← Back to work</a>
+        <span class="cs-hero__tag">B2C Mobile App</span>
+      </div>
+
+      <!-- REPLACE: swap .cs-mockup__ph with <img src="assets/images/savepoint-mockup.jpg" alt="SAVEPOINT mockup" style="width:100%;height:100%;object-fit:cover;border-radius:20px 20px 0 0;"> -->
+      <div class="cs-mockup">
+        <div class="cs-mockup__ph">
+          <span class="cs-mockup__label">SAVEPOINT</span>
+          <span>[ Drop mockup image here — 16:9 ]</span>
+        </div>
+      </div>
+
+      <div class="cs-meta">
+        <div class="cs-meta__cell">
+          <span class="cs-meta__label">Project</span>
+          <span class="cs-meta__val">SAVEPOINT</span>
+        </div>
+        <div class="cs-meta__cell">
+          <span class="cs-meta__label">Type</span>
+          <span class="cs-meta__val">Mobile App</span>
+        </div>
+        <div class="cs-meta__cell">
+          <span class="cs-meta__label">Year</span>
+          <span class="cs-meta__val">2024</span>
+        </div>
+        <div class="cs-meta__cell">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__val">UI/UX Designer</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ OVERVIEW ═══ -->
+    <section class="cs-overview" data-reveal>
+      <div class="cs-overview__inner">
+        <div>
+          <span class="section-label">/ Overview</span>
+          <span class="section-num">(01)</span>
+        </div>
+        <div>
+          <p class="cs-overview__pull">
+            A social platform for gamers — built for the people who play
+            seriously but had nowhere to share it.
+          </p>
+          <p class="cs-overview__body">
+            SAVEPOINT is a React Native mobile application designed for gamers
+            who want more than a leaderboard. Built to bridge the gap between
+            solo play and community, it lets users track their gaming progress,
+            share milestones, and connect with a squad — without leaving the
+            experience of the game itself behind. Designed solo across UI and UX
+            in 2024.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PAIN POINT CARDS ═══ -->
+    <section class="cs-cards" data-reveal>
+      <div class="cs-cards__header">
+        <div>
+          <span class="section-label">/ Design Decisions</span>
+          <span class="section-num">(02)</span>
+        </div>
+        <span class="cs-cards__hint">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M3 8h10M9 4l4 4-4 4"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Scroll to explore
+        </span>
+      </div>
+
+      <div class="cs-cards__track" id="savepoint-track">
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/SP card 1.png" alt="SAVEPOINT Mockup 1" />
+          </div>
+          <span class="cs-card__num">01</span>
+          <p class="cs-card__problem">Fleeting Social Feeds</p>
+          <h3 class="cs-card__title">
+            Gaming clips disappear down fast-moving, disposable timelines.
+          </h3>
+          <p class="cs-card__body">
+            Traditional platforms treat gameplay as disposable content. Gamers
+            lack a dedicated space focused on preserving their personal digital
+            history and virtual memories.
+          </p>
+          <div class="cs-card__solution">
+            Structured as a digital journal, the profile grid and categorized
+            tabs create a permanent, celebratory archive rather than just
+            another fleeting feed.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/SP card 2.png" alt="SAVEPOINT Mockup 2" />
+          </div>
+          <span class="cs-card__num">02</span>
+          <p class="cs-card__problem">Hyper-Competitive Aesthetics</p>
+          <h3 class="cs-card__title">
+            Aggressive neons and "Twitch-style" UI alienate casual players.
+          </h3>
+          <p class="cs-card__body">
+            Most gaming apps rely heavily on heavy blues and purples catering to
+            a hyper-competitive mindset. This visual noise creates an exhausting
+            environment for relaxed players.
+          </p>
+          <div class="cs-card__solution">
+            A premium, editorial cream-and-black palette intentionally shifts
+            the brand focus toward warmth, nostalgia, and personal memory.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/SP card 3.png" alt="SAVEPOINT Mockup 3" />
+          </div>
+          <span class="cs-card__num">03</span>
+          <p class="cs-card__problem">Unreliable Media Uploads</p>
+          <h3 class="cs-card__title">
+            Standard apps struggle with large, high-quality gameplay videos.
+          </h3>
+          <p class="cs-card__body">
+            Relying on standard Base64 encoding inflates file sizes, eats up
+            memory, and frequently causes large video uploads to fail for the
+            end user.
+          </p>
+          <div class="cs-card__solution">
+            Engineering bypasses Base64 entirely. Direct binary streaming to
+            Supabase Storage prevents inflation and ensures large media is
+            handled efficiently and reliably.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/SP card 4.png" alt="SAVEPOINT Mockup 4" />
+          </div>
+          <span class="cs-card__num">04</span>
+          <p class="cs-card__problem">Low Archiving Motivation</p>
+          <h3 class="cs-card__title">
+            Users lose motivation to document moments without validation.
+          </h3>
+          <p class="cs-card__body">
+            Without immediate feedback or incentives, the habit of archiving
+            experiences quickly drops off, leading to low long-term engagement
+            and retention.
+          </p>
+          <div class="cs-card__solution">
+            Built-in gamification awards XP for posting and engaging. Streaks
+            and leaderboards turn memory archiving into a rewarding,
+            community-driven loop.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/SP card 5.png" alt="SAVEPOINT Mockup 5" />
+          </div>
+          <span class="cs-card__num">05</span>
+          <p class="cs-card__problem">Sluggish Interactions</p>
+          <h3 class="cs-card__title">
+            Waiting for network confirmations makes core social features clunky.
+          </h3>
+          <p class="cs-card__body">
+            Complex database queries cause noticeable UI lag when liking,
+            commenting, or messaging, disrupting the instantaneous feel expected
+            from modern social apps.
+          </p>
+          <div class="cs-card__solution">
+            Optimistic UI instantly injects actions into local state.
+            Client-side data joining keeps chats and feeds feeling instantaneous
+            before the network even catches up.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ END NAV ═══ -->
+    <div class="cs-end" data-reveal>
+      <div class="cs-end__left">
+        <h2>Next project</h2>
+        <p>Rebuilding a broken interface — UX audit to final design</p>
+      </div>
+      <div class="cs-end__nav">
+        <a href="zive.html" class="cs-end__btn">← ZIVE</a>
+        <a href="redesign.html" class="cs-end__btn cs-end__btn--primary"
+          >Redesign →</a
+        >
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span class="footer__mark">./zoru</span>
+        <span class="footer__copy">© 2025 — Bengaluru, India</span>
+        <div class="footer__links">
+          <a href="mailto:hello@zoru.design" class="footer__link">Email</a>
+          <a
+            href="https://linkedin.com/in/zoru"
+            class="footer__link"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="assets/zoru-resume.pdf" class="footer__link" download
+            >Resume ↓</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const track = document.querySelector(".cs-cards__track");
+        let isDown = false,
+          startX,
+          scrollLeft,
+          velX = 0,
+          lastX,
+          rafId;
+
+        // ── Horizontal Drag & Scroll Logic ──
+        if (track) {
+          track.addEventListener("mousedown", (e) => {
+            isDown = true;
+            track.classList.add("is-dragging");
+            startX = e.pageX - track.offsetLeft;
+            scrollLeft = track.scrollLeft;
+            lastX = e.pageX;
+            velX = 0;
+            cancelAnimationFrame(rafId);
+          });
+
+          window.addEventListener("mouseup", () => {
+            if (!isDown) return;
+            isDown = false;
+            track.classList.remove("is-dragging");
+            const glide = () => {
+              velX *= 0.92;
+              if (Math.abs(velX) < 0.5) return;
+              track.scrollLeft -= velX;
+              rafId = requestAnimationFrame(glide);
+            };
+            rafId = requestAnimationFrame(glide);
+          });
+
+          window.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - track.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            velX = (e.pageX - lastX) * 1.5;
+            track.scrollLeft = scrollLeft - walk;
+            lastX = e.pageX;
+          });
+
+          track.addEventListener(
+            "wheel",
+            (e) => {
+              if (e.deltaY !== 0) {
+                e.preventDefault();
+                track.scrollLeft += e.deltaY;
+              }
+            },
+            { passive: false },
+          );
+        }
+
+        // ── Card Hover & Mockup Preview Logic ──
+        let activePreview = null;
+
+        document.querySelectorAll(".cs-card").forEach((card) => {
+          const preview = card.querySelector(".cs-card__preview");
+
+          if (preview) {
+            // Detach preview from card to avoid CSS transform clipping, move to body
+            document.body.appendChild(preview);
+            // Link the preview back to the card object in memory
+            card._linkedPreview = preview;
+          }
+
+          card.addEventListener("mouseenter", () => {
+            if (card._linkedPreview) {
+              activePreview = card._linkedPreview;
+              activePreview.classList.add("is-visible");
+            }
+          });
+
+          card.addEventListener("mouseleave", () => {
+            if (card._linkedPreview) {
+              card._linkedPreview.classList.remove("is-visible");
+            }
+            activePreview = null;
+          });
+        });
+
+        // Make the active preview follow the mouse
+        document.addEventListener("mousemove", (e) => {
+          if (activePreview) {
+            // Positioned perfectly next to the cursor
+            activePreview.style.left = e.clientX + 24 + "px";
+            activePreview.style.top = e.clientY - 120 + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

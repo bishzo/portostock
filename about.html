@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile — Zoru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__mark">./zoru</a>
+      <div class="nav__center">
+        <span class="nav__date" id="nav-date"></span>
+      </div>
+      <ul class="nav__links">
+        <li>
+          <a href="about.html" class="nav__link nav__link--active"
+            >Profile & Work</a
+          >
+        </li>
+        <li><a href="#contact" class="nav__link nav__link--hi">Say hi ↗</a></li>
+      </ul>
+    </nav>
+
+    <section class="profile-top" data-reveal>
+      <div class="profile-top__inner">
+        <div class="about-col">
+          <span class="section-label">/ Who I Am</span>
+          <h1 class="about-col__title">
+            Designer, Developer, & Digital Native.
+          </h1>
+
+          <div class="about-col__text">
+            <p>
+              I'm Zoru — UI/UX designer and developer based in Bengaluru. I
+              build products at the intersection of how things look and how they
+              actually work.
+            </p>
+            <p>
+              Currently studying BCA at Kristu Jayanti College. Outside that: I
+              game obsessively (which is why SAVEPOINT exists), think in
+              systems, and believe the best design is the kind nobody notices.
+            </p>
+          </div>
+        </div>
+
+        <div class="archive-col">
+          <span class="section-label">/ All projects</span>
+          <div class="gallery">
+            <a href="zive.html" class="gallery-card">
+              <div class="gallery-card__image">
+                <div class="gallery-card__image-ph">ZIVE</div>
+                <div class="gallery-card__overlay">View →</div>
+              </div>
+              <div class="gallery-card__info">
+                <div class="gallery-card__meta">
+                  <span class="gallery-card__tag">Brand Strategy</span>
+                  <span class="gallery-card__year">2025</span>
+                </div>
+                <h3 class="gallery-card__title">ZIVE</h3>
+              </div>
+            </a>
+
+            <a href="savepoint.html" class="gallery-card">
+              <div class="gallery-card__image">
+                <div class="gallery-card__image-ph">SAVEPOINT</div>
+                <div class="gallery-card__overlay">View →</div>
+              </div>
+              <div class="gallery-card__info">
+                <div class="gallery-card__meta">
+                  <span class="gallery-card__tag">B2C Mobile App</span>
+                  <span class="gallery-card__year">2024</span>
+                </div>
+                <h3 class="gallery-card__title">SAVEPOINT</h3>
+              </div>
+            </a>
+
+            <a href="redesign.html" class="gallery-card">
+              <div class="gallery-card__image">
+                <div class="gallery-card__image-ph">Redesign</div>
+                <div class="gallery-card__overlay">View →</div>
+              </div>
+              <div class="gallery-card__info">
+                <div class="gallery-card__meta">
+                  <span class="gallery-card__tag">Interface Redesign</span>
+                  <span class="gallery-card__year">2025</span>
+                </div>
+                <h3 class="gallery-card__title">Redesign Project</h3>
+              </div>
+            </a>
+
+            <a href="coming-soon.html" class="gallery-card">
+              <div class="gallery-card__image">
+                <div class="gallery-card__image-ph" style="opacity: 0.4">
+                  Coming Soon
+                </div>
+                <div class="gallery-card__overlay">Peek →</div>
+              </div>
+              <div class="gallery-card__info">
+                <div class="gallery-card__meta">
+                  <span class="gallery-card__tag">Brand Identity</span>
+                  <span class="gallery-card__year">2025</span>
+                </div>
+                <h3 class="gallery-card__title" style="opacity: 0.5">TBD</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-bottom" id="contact" data-reveal>
+      <div class="contact-box">
+        <div class="contact-box__left">
+          <span class="section-label" style="color: rgba(255, 255, 255, 0.4)"
+            >/ Let's Talk</span
+          >
+          <h2 class="contact-box__title">Got any ideas?</h2>
+          <p class="contact-box__desc">
+            Whether it's a new product, a redesign, or just exploring concepts —
+            let's build something worth remembering.
+          </p>
+        </div>
+
+        <div class="contact-box__right">
+          <form class="custom-form" onsubmit="event.preventDefault()">
+            <div class="form-row">
+              <input
+                type="text"
+                class="form-input"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                class="form-input"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+
+            <textarea
+              class="form-input"
+              placeholder="Give me a quick overview of your idea..."
+              rows="1"
+              required
+            ></textarea>
+
+            <select class="form-input" required>
+              <option value="" disabled selected>
+                How quickly do you need this?
+              </option>
+              <option value="chill">No rush, just exploring</option>
+              <option value="soon">Within the next month</option>
+              <option value="asap">ASAP (Expedited)</option>
+            </select>
+
+            <div class="form-actions">
+              <button type="submit" class="cta-btn">Send message →</button>
+              <span class="form-or">or</span>
+              <button
+                type="button"
+                class="cta-btn cta-btn--outline"
+                id="open-modal-btn"
+              >
+                Book a Call
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span class="footer__mark">./zoru</span>
+        <span class="footer__copy">© 2025 — Bengaluru, India</span>
+        <div class="footer__links">
+          <a href="mailto:hello@zoru.design" class="footer__link">Email</a>
+          <a
+            href="https://linkedin.com/in/zoru"
+            class="footer__link"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="assets/zoru-resume.pdf" class="footer__link" download
+            >Resume ↓</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" id="call-modal">
+      <div class="modal__bg" id="modal-close-bg"></div>
+      <div class="modal__card">
+        <h3 class="modal__title">Let's hop on a call.</h3>
+        <p class="modal__desc">
+          Drop your details below and I'll reach out with a few time slots.
+        </p>
+
+        <form id="modal-form">
+          <input
+            type="email"
+            class="form-input"
+            placeholder="Email address"
+            required
+          />
+          <input
+            type="tel"
+            class="form-input"
+            placeholder="Phone number"
+            required
+          />
+          <button type="submit" class="cta-btn w-full" id="modal-submit-btn">
+            Request Call
+          </button>
+        </form>
+
+        <div class="modal__success" id="modal-success">
+          <span class="modal__check">✓</span>
+          <h4>Request Sent</h4>
+          <p>Talk to you soon.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // 1. Modal Logic
+      const modal = document.getElementById("call-modal");
+      document
+        .getElementById("open-modal-btn")
+        .addEventListener("click", () => modal.classList.add("is-active"));
+      document
+        .getElementById("modal-close-bg")
+        .addEventListener("click", () => modal.classList.remove("is-active"));
+      document.getElementById("modal-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        document.getElementById("modal-success").classList.add("is-active");
+        setTimeout(() => {
+          modal.classList.remove("is-active");
+          document
+            .getElementById("modal-success")
+            .classList.remove("is-active");
+        }, 2800);
+      });
+
+      // 2. Emerging Card Parallax Logic
+      const topSection = document.querySelector(".profile-top");
+      const bottomSection = document.querySelector(".profile-bottom");
+
+      window.addEventListener("scroll", () => {
+        const bottomY = bottomSection.getBoundingClientRect().top;
+        const vh = window.innerHeight;
+
+        if (bottomY < vh) {
+          let progress = 1 - bottomY / vh;
+          progress = Math.max(0, Math.min(1, progress));
+          topSection.style.transform = `scale(${1 - progress * 0.05}) translateY(${progress * 30}px)`;
+          topSection.style.opacity = 1 - progress * 0.4;
+        } else {
+          topSection.style.transform = "scale(1) translateY(0)";
+          topSection.style.opacity = 1;
+        }
+      });
+
+      // 3. Nav Active State Toggler (Smooth Observer)
+      const profileLink = document.querySelector(
+        'a[href="about.html"].nav__link',
+      );
+      const contactLink = document.querySelector(
+        'a[href="#contact"].nav__link',
+      );
+      const contactTarget = document.getElementById("contact");
+
+      // The observer watches the contact section without spamming the browser
+      const navObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // We entered the contact section -> switch active states smoothly
+              profileLink.classList.remove("nav__link--active");
+              contactLink.classList.add("nav__link--active");
+            } else {
+              // We scrolled back up -> revert active states
+              contactLink.classList.remove("nav__link--active");
+              profileLink.classList.add("nav__link--active");
+            }
+          });
+        },
+        {
+          // This triggers exactly when 40% of the contact card is visible on screen
+          threshold: 0.4,
+        },
+      );
+
+      if (contactTarget) {
+        navObserver.observe(contactTarget);
+      }
+    </script>
+  </body>
+</html>

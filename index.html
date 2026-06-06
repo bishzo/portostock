@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoru — UI/UX Designer</title>
+    <meta
+      name="description"
+      content="UI/UX Designer designing considered digital products and interfaces. Based in Bengaluru."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!-- ═══ NAV ═══ -->
+    <nav class="nav" id="nav">
+      <a href="/" class="nav__mark">./zoru</a>
+      <div class="nav__center">
+        <span class="nav__date" id="nav-date"></span>
+      </div>
+      <ul class="nav__links" style="margin-left: auto">
+        <li><a href="about.html" class="nav__link">Profile & Work</a></li>
+        <li>
+          <a href="about.html#contact" class="nav__link nav__link--hi"
+            >Say hi ↗</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+      <div class="hero__top">
+        <span class="hero__stamp">UI/UX Designer</span>
+        <span class="hero__stamp hero__stamp--right">©2025</span>
+      </div>
+      <div class="hero__body">
+        <h1 class="hero__title">
+          <span class="hero__title-line" data-line="1">Designing</span>
+          <span class="hero__title-line hero__title-line--indent" data-line="2"
+            ><em>considered</em></span
+          >
+          <span class="hero__title-line" data-line="3">interfaces.</span>
+        </h1>
+        <div class="hero__portrait-col">
+          <div class="hero__portrait">
+            <!-- Replace with: <img src="assets/images/portrait.jpg" alt="Zoru" /> -->
+            <div class="hero__portrait-ph">
+              <span>Your photo here</span>
+            </div>
+            <div class="hero__portrait-tag">
+              <span>Bengaluru, IN</span>
+              <span class="hero__dot"></span>
+              <span>Open to work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__bottom">
+        <p class="hero__sub">
+          Junior UI/UX Designer — building digital products at the intersection
+          of craft and clarity.
+        </p>
+        <a href="about.html" class="hero__cta"
+          >View profile & work <span class="hero__arrow">→</span></a
+        >
+      </div>
+    </section>
+
+    <!-- ═══ TICKER ═══ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>UI Design</span><span class="ticker__sep">/</span>
+        <span>UX Research</span><span class="ticker__sep">/</span>
+        <span>Product Design</span><span class="ticker__sep">/</span>
+        <span>Figma</span><span class="ticker__sep">/</span>
+        <span>React Native</span><span class="ticker__sep">/</span>
+        <span>Visual Design</span><span class="ticker__sep">/</span>
+        <span>Design Systems</span><span class="ticker__sep">/</span>
+        <span>Prototyping</span><span class="ticker__sep">/</span>
+        <span>UI Design</span><span class="ticker__sep">/</span>
+        <span>UX Research</span><span class="ticker__sep">/</span>
+        <span>Product Design</span><span class="ticker__sep">/</span>
+        <span>Figma</span><span class="ticker__sep">/</span>
+        <span>React Native</span><span class="ticker__sep">/</span>
+        <span>Visual Design</span><span class="ticker__sep">/</span>
+        <span>Design Systems</span><span class="ticker__sep">/</span>
+        <span>Prototyping</span><span class="ticker__sep">/</span>
+      </div>
+    </div>
+
+    <!-- ═══ ABOUT INTRO ═══ -->
+    <section class="about" data-reveal>
+      <div class="about__inner">
+        <div class="about__label-col">
+          <span class="section-label">/ About</span>
+          <span class="section-num">(01)</span>
+        </div>
+        <div class="about__content">
+          <p class="about__pull">
+            I'm Zoru — a UI/UX designer and developer based in Bengaluru,
+            focused on building products that are as considered in their craft
+            as they are in their function.
+          </p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <span class="about__stat-num">3+</span>
+              <span class="about__stat-label">Projects shipped</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-num">2</span>
+              <span class="about__stat-label">Years designing</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-num">5</span>
+              <span class="about__stat-label">Tools mastered</span>
+            </div>
+          </div>
+          <a href="about.html" class="text-link">Full profile →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SERVICES ═══ -->
+    <!-- ═══ SERVICES ═══ -->
+    <section class="services" data-reveal>
+      <div class="services__inner">
+        <div class="services__header">
+          <span class="section-label" style="color: rgba(255, 255, 255, 0.35)"
+            >/ Services</span
+          >
+          <span class="section-num" style="color: rgba(255, 255, 255, 0.25)"
+            >(02)</span
+          >
+        </div>
+        <div class="services__list">
+          <div class="service-item">
+            <div class="service-item__info">
+              <span class="service-item__num">01</span>
+              <h3 class="service-item__name">UI Design</h3>
+            </div>
+            <div class="service-item__media">
+              <div class="service-item__media-ph">UI Design</div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-item__info">
+              <span class="service-item__num">02</span>
+              <h3 class="service-item__name">UX Research</h3>
+            </div>
+            <div class="service-item__media">
+              <div class="service-item__media-ph">UX Research</div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-item__info">
+              <span class="service-item__num">03</span>
+              <h3 class="service-item__name">Product Design</h3>
+            </div>
+            <div class="service-item__media">
+              <div class="service-item__media-ph">Product Design</div>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-item__info">
+              <span class="service-item__num">04</span>
+              <h3 class="service-item__name">Design Direction</h3>
+            </div>
+            <div class="service-item__media">
+              <div class="service-item__media-ph">Design Direction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project list — Kanso row style -->
+    <section class="work" data-reveal>
+      <div class="work__list">
+        <!-- 01: ZIVE -->
+        <a href="zive.html" class="work-row" data-index="01">
+          <div class="work-row__left">
+            <span class="work-row__index">01</span>
+            <div>
+              <h2 class="work-row__title">ZIVE</h2>
+              <p class="work-row__desc">
+                Curated capsule & micro-stay booking platform for Japan.
+              </p>
+            </div>
+          </div>
+          <div class="work-row__right">
+            <span class="work-row__tag">Brand & UX Strategy</span>
+            <span class="work-row__year">2025</span>
+            <span class="work-row__arrow">↗</span>
+          </div>
+          <div class="work-row__thumb">
+            <div class="work-row__thumb-ph">ZIVE</div>
+          </div>
+        </a>
+
+        <!-- 02: SAVEPOINT -->
+        <a href="savepoint.html" class="work-row" data-index="02">
+          <div class="work-row__left">
+            <span class="work-row__index">02</span>
+            <div>
+              <h2 class="work-row__title">SAVEPOINT</h2>
+              <p class="work-row__desc">
+                Social platform for gamers — mobile app, React Native.
+              </p>
+            </div>
+          </div>
+          <div class="work-row__right">
+            <span class="work-row__tag">B2C Mobile App</span>
+            <span class="work-row__year">2024</span>
+            <span class="work-row__arrow">↗</span>
+          </div>
+          <div class="work-row__thumb">
+            <div class="work-row__thumb-ph">SAVEPOINT</div>
+          </div>
+        </a>
+
+        <!-- 03: YOUTUBE REDESIGN -->
+        <a href="redesign.html" class="work-row" data-index="03">
+          <div class="work-row__left">
+            <span class="work-row__index">03</span>
+            <div>
+              <h2 class="work-row__title">YouTube Redesign</h2>
+              <p class="work-row__desc">
+                A conceptual UI/UX overhaul focusing on modernizing the viewing
+                experience.
+              </p>
+            </div>
+          </div>
+          <div class="work-row__right">
+            <span class="work-row__tag">Interface Redesign</span>
+            <span class="work-row__year">2025</span>
+            <span class="work-row__arrow">↗</span>
+          </div>
+          <div class="work-row__thumb">
+            <div class="work-row__thumb-ph">YouTube</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="process" data-reveal>
+      <div class="process__inner">
+        <div class="process__header">
+          <span class="section-label" style="color: rgba(255, 255, 255, 0.4)"
+            >/ How I work</span
+          >
+          <span class="section-num" style="color: rgba(255, 255, 255, 0.4)"
+            >(04)</span
+          >
+        </div>
+        <div class="process__grid">
+          <div class="process-step">
+            <span class="process-step__num">01</span>
+            <h3 class="process-step__title">Understand</h3>
+            <p class="process-step__desc">
+              I start by listening — to the brief, the users, the constraints.
+              No assumptions, no templates. Every project starts from zero.
+            </p>
+          </div>
+          <div class="process-step">
+            <span class="process-step__num">02</span>
+            <h3 class="process-step__title">Define</h3>
+            <p class="process-step__desc">
+              Problems get framed before solutions get built. I map user flows,
+              identify friction, and align on what success actually looks like.
+            </p>
+          </div>
+          <div class="process-step">
+            <span class="process-step__num">03</span>
+            <h3 class="process-step__title">Design</h3>
+            <p class="process-step__desc">
+              From rough wireframes to high-fidelity systems. I work in
+              iterations, show my thinking, and kill darlings when something
+              better shows up.
+            </p>
+          </div>
+          <div class="process-step">
+            <span class="process-step__num">04</span>
+            <h3 class="process-step__title">Deliver</h3>
+            <p class="process-step__desc">
+              Clean handoffs, documented components, and real files — not just
+              screenshots. Built to be handed to a developer and actually used.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ THOUGHTS ═══ -->
+    <section class="thoughts" data-reveal>
+      <div class="thoughts__inner">
+        <div class="thoughts__header">
+          <span class="section-label">/ Thoughts</span>
+          <span class="section-num">(05)</span>
+        </div>
+        <div class="thoughts__list">
+          <a href="#" class="thought-item">
+            <div class="thought-item__left">
+              <span class="thought-item__date">Jun 2026</span>
+              <h3 class="thought-item__title">
+                Competing with AI: Why taste is the new execution
+              </h3>
+            </div>
+            <p class="thought-item__desc">
+              When models can act as instant code builders and UI generators,
+              feeling lost is natural. The survival strategy? Stop competing on
+              speed, and start competing on curation and human nuance.
+            </p>
+            <span class="thought-item__arrow">↗</span>
+          </a>
+          <a href="#" class="thought-item">
+            <div class="thought-item__left">
+              <span class="thought-item__date">May 2026</span>
+              <h3 class="thought-item__title">
+                The quiet joy of the craft (and why I never log off)
+              </h3>
+            </div>
+            <p class="thought-item__desc">
+              Between the noise of the digital world, there's a specific kind of
+              peace in opening a blank file. Beyond deliverables, the sheer act
+              of wrestling with logic and design remains my favorite place to
+              be.
+            </p>
+            <span class="thought-item__arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA BAND ═══ -->
+    <section class="cta-band" data-reveal>
+      <div class="cta-band__inner">
+        <p class="cta-band__label">
+          Currently available for internships & junior roles
+        </p>
+        <h2 class="cta-band__title">
+          Let's make something<br /><em>worth remembering.</em>
+        </h2>
+        <a href="about.html#contact" class="cta-band__btn">Get in touch →</a>
+      </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <span class="footer__mark">./zoru</span>
+        <span class="footer__copy">© 2025 — Bengaluru, India</span>
+        <div class="footer__links">
+          <a href="mailto:hello@zoru.design" class="footer__link">Email</a>
+          <a
+            href="https://linkedin.com/in/zoru"
+            class="footer__link"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="assets/zoru-resume.pdf" class="footer__link" download
+            >Resume ↓</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

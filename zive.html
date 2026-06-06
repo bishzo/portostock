@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZIVE — Case Study · Zoru</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="case.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav__mark">./zoru</a>
+      <div class="nav__center">
+        <span class="nav__date" id="nav-date"></span>
+      </div>
+      <ul class="nav__links" style="margin-left: auto">
+        <li><a href="about.html" class="nav__link">Profile & Work</a></li>
+        <li>
+          <a href="about.html#contact" class="nav__link nav__link--hi"
+            >Say hi ↗</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ═══ HERO MOCKUP ═══ -->
+    <div class="cs-hero" data-reveal>
+      <div class="cs-hero__eyebrow">
+        <a href="about.html" class="cs-hero__back">← Back to work</a>
+        <span class="cs-hero__tag">Brand Identity</span>
+      </div>
+
+      <!-- MOCKUP FRAME -->
+      <!-- REPLACE: swap .cs-mockup__ph with <img src="assets/images/zive-mockup.jpg" alt="ZIVE mockup" style="width:100%;height:100%;object-fit:cover;border-radius:20px 20px 0 0;"> -->
+      <div class="cs-mockup">
+        <div class="cs-mockup__ph">
+          <span class="cs-mockup__label">ZIVE</span>
+          <span>[ Drop mockup image here — 16:9 ]</span>
+        </div>
+      </div>
+
+      <!-- META STRIP -->
+      <div class="cs-meta">
+        <div class="cs-meta__cell">
+          <span class="cs-meta__label">Project</span>
+          <span class="cs-meta__val">ZIVE</span>
+        </div>
+        <div class="cs-meta__cell">
+          <span class="cs-meta__label">Type</span>
+          <span class="cs-meta__val">Brand Strategy</span>
+        </div>
+        <div class="cs-meta__cell">
+          <span class="cs-meta__label">Year</span>
+          <span class="cs-meta__val">2025</span>
+        </div>
+        <div class="cs-meta__cell">
+          <span class="cs-meta__label">Role</span>
+          <span class="cs-meta__val">UX Research & Brand</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ OVERVIEW ═══ -->
+    <section class="cs-overview" data-reveal>
+      <div class="cs-overview__inner">
+        <div>
+          <span class="section-label">/ Overview</span>
+          <span class="section-num">(01)</span>
+        </div>
+        <div>
+          <p class="cs-overview__pull">
+            A booking platform built for travelers who need to actually find
+            where they're going — not just where they're staying.
+          </p>
+          <p class="cs-overview__body">
+            ZIVE is a curated micro-space and capsule hotel booking platform
+            designed for the modern solo traveler in Japan. The project began as
+            a research exercise into why existing platforms fail international
+            guests — and turned into a full brand and UX strategy deliverable.
+            Competitor audit, three user personas, a mood board, and eight
+            specific pain-point-to-solution mappings were produced as the
+            foundation for any future build.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PAIN POINT CARDS ═══ -->
+    <section class="cs-cards" data-reveal>
+      <div class="cs-cards__header">
+        <div>
+          <span class="section-label">/ Pain Points & Solutions</span>
+          <span class="section-num">(02)</span>
+        </div>
+        <span class="cs-cards__hint">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M3 8h10M9 4l4 4-4 4"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Scroll to explore
+        </span>
+      </div>
+
+      <div class="cs-cards__track" id="zive-track">
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/Zive card 1 mockup.png" alt="ZIVE Mockup 1" />
+          </div>
+          <span class="cs-card__num">01</span>
+          <p class="cs-card__problem">Language Barrier</p>
+          <h3 class="cs-card__title">
+            Listings feel unreliable before you even book.
+          </h3>
+          <p class="cs-card__body">
+            Amenity descriptions and check-in instructions written only in
+            Japanese — or poorly machine-translated — leave international
+            travelers guessing what they're actually booking.
+          </p>
+          <div class="cs-card__solution">
+            Every ZIVE listing uses universal iconography and requires bilingual
+            descriptions. Filter tags work in both languages so nothing is lost
+            in translation.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/Zive card 2 mockup.png" alt="ZIVE Mockup 2" />
+          </div>
+          <span class="cs-card__num">02</span>
+          <p class="cs-card__problem">Navigation</p>
+          <h3 class="cs-card__title">
+            You don't know where you're going until you're already lost.
+          </h3>
+          <p class="cs-card__body">
+            "Inside Shinjuku Station" with no exit name or landmark is an
+            anxiety trigger, not a confirmation. You find out it's confusing
+            when you're already there.
+          </p>
+          <div class="cs-card__solution">
+            Every listing has a "How to Find Us" card — exit name, walking time,
+            landmark photo, address in English and Japanese. Resent 24 hours
+            before check-in.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/Zive card 3 mockup.png" alt="ZIVE Mockup 3" />
+          </div>
+          <span class="cs-card__num">03</span>
+          <p class="cs-card__problem">Pricing Transparency</p>
+          <h3 class="cs-card__title">
+            The real price only appears at the last step.
+          </h3>
+          <p class="cs-card__body">
+            Platforms show a nightly rate then add taxes, service fees, and
+            cleaning charges at checkout. By then you're already invested — and
+            either annoyed or just paying it.
+          </p>
+          <div class="cs-card__solution">
+            ZIVE shows the full price — taxes and fees included — from the
+            moment you open a listing. The number on the card is the number you
+            pay.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/Zive card 4 mockup.png" alt="ZIVE Mockup 4" />
+          </div>
+          <span class="cs-card__num">04</span>
+          <p class="cs-card__problem">Capsule Clarity</p>
+          <h3 class="cs-card__title">
+            You can't tell what the capsule is actually like.
+          </h3>
+          <p class="cs-card__body">
+            Whether there's a door or just a curtain, how tall the bunk is,
+            whether the locker fits a laptop bag — none of it is standardised or
+            reliably listed.
+          </p>
+          <div class="cs-card__solution">
+            Granular filter tags: door vs. curtain, bunk height in cm, noise
+            level rating, locker size. Every detail that affects comfort is
+            searchable before you open a single listing.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/Zive card  5 mockup.png" alt="ZIVE Mockup 5" />
+          </div>
+          <span class="cs-card__num">05</span>
+          <p class="cs-card__problem">Listing Photography</p>
+          <h3 class="cs-card__title">
+            Photos are misleading or missing entirely.
+          </h3>
+          <p class="cs-card__body">
+            Wide-angle distortion, stylised renders, or one blurry exterior
+            shot. You book based on what looks good, arrive to something
+            different, and lose trust in the platform.
+          </p>
+          <div class="cs-card__solution">
+            Every ZIVE listing requires a minimum set of honest, natural-light
+            photos — pod interior, desk, bathroom, locker, entrance. No renders,
+            no distortion.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/Zive card 6 mockup.png" alt="ZIVE Mockup 6" />
+          </div>
+          <span class="cs-card__num">06</span>
+          <p class="cs-card__problem">Payment Friction</p>
+          <h3 class="cs-card__title">
+            Foreign cards get rejected with no explanation.
+          </h3>
+          <p class="cs-card__body">
+            You reach payment, enter your card, and it fails. No clear reason,
+            no alternative suggested. You either abandon the booking or spend
+            time troubleshooting.
+          </p>
+          <div class="cs-card__solution">
+            ZIVE supports major international cards, PayPal, and regional
+            methods. The system detects your location and surfaces the most
+            likely working option first.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/Zive card 7 mockup.png" alt="ZIVE Mockup 7" />
+          </div>
+          <span class="cs-card__num">07</span>
+          <p class="cs-card__problem">Host Communication</p>
+          <h3 class="cs-card__title">
+            Host communication is slow, automated, and impersonal.
+          </h3>
+          <p class="cs-card__body">
+            Pre-arrival instructions arrive as a wall of text the morning of
+            check-in — too late to be useful, too dense to read quickly.
+          </p>
+          <div class="cs-card__solution">
+            In-app messaging with pre-translated templates. A personalised
+            pre-arrival message sent 24 hours before check-in — concise,
+            structured, human in tone.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <img src="assets/Zive card 8 mockup.png" alt="ZIVE Mockup 8" />
+          </div>
+          <span class="cs-card__num">08</span>
+          <p class="cs-card__problem">Work-Readiness</p>
+          <h3 class="cs-card__title">
+            Finding a work-friendly stay means opening twelve tabs.
+          </h3>
+          <p class="cs-card__body">
+            "Business-friendly" means nothing specific. You cross-reference
+            listing descriptions, hunt for a desk in photos, google the Wi-Fi
+            speed, and still aren't sure until you arrive.
+          </p>
+          <div class="cs-card__solution">
+            ZIVE's Work-Ready badge is verified against fixed criteria — desk
+            present, Wi-Fi speed tested, noise rating, power outlet visible in
+            photos. One badge, no guesswork.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ END NAV ═══ -->
+    <div class="cs-end" data-reveal>
+      <div class="cs-end__left">
+        <h2>Next project</h2>
+        <p>Social platform for gamers — mobile app, React Native</p>
+      </div>
+      <div class="cs-end__nav">
+        <a href="about.html" class="cs-end__btn">← All work</a>
+        <a href="savepoint.html" class="cs-end__btn cs-end__btn--primary"
+          >SAVEPOINT →</a
+        >
+      </div>
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <span class="footer__mark">./zoru</span>
+        <span class="footer__copy">© 2025 — Bengaluru, India</span>
+        <div class="footer__links">
+          <a href="mailto:hello@zoru.design" class="footer__link">Email</a>
+          <a
+            href="https://linkedin.com/in/zoru"
+            class="footer__link"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="assets/zoru-resume.pdf" class="footer__link" download
+            >Resume ↓</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const track = document.querySelector(".cs-cards__track");
+        let isDown = false,
+          startX,
+          scrollLeft,
+          velX = 0,
+          lastX,
+          rafId;
+
+        // ── Horizontal Drag & Scroll Logic ──
+        if (track) {
+          track.addEventListener("mousedown", (e) => {
+            isDown = true;
+            track.classList.add("is-dragging");
+            startX = e.pageX - track.offsetLeft;
+            scrollLeft = track.scrollLeft;
+            lastX = e.pageX;
+            velX = 0;
+            cancelAnimationFrame(rafId);
+          });
+
+          window.addEventListener("mouseup", () => {
+            if (!isDown) return;
+            isDown = false;
+            track.classList.remove("is-dragging");
+            const glide = () => {
+              velX *= 0.92;
+              if (Math.abs(velX) < 0.5) return;
+              track.scrollLeft -= velX;
+              rafId = requestAnimationFrame(glide);
+            };
+            rafId = requestAnimationFrame(glide);
+          });
+
+          window.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - track.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            velX = (e.pageX - lastX) * 1.5;
+            track.scrollLeft = scrollLeft - walk;
+            lastX = e.pageX;
+          });
+
+          track.addEventListener(
+            "wheel",
+            (e) => {
+              if (e.deltaY !== 0) {
+                e.preventDefault();
+                track.scrollLeft += e.deltaY;
+              }
+            },
+            { passive: false },
+          );
+        }
+
+        // ── Card Hover & Mockup Preview Logic ──
+        let activePreview = null;
+
+        document.querySelectorAll(".cs-card").forEach((card) => {
+          const preview = card.querySelector(".cs-card__preview");
+
+          if (preview) {
+            // Detach preview from card to avoid CSS transform clipping, move to body
+            document.body.appendChild(preview);
+            // Link the preview back to the card object in memory
+            card._linkedPreview = preview;
+          }
+
+          card.addEventListener("mouseenter", () => {
+            if (card._linkedPreview) {
+              activePreview = card._linkedPreview;
+              activePreview.classList.add("is-visible");
+            }
+          });
+
+          card.addEventListener("mouseleave", () => {
+            if (card._linkedPreview) {
+              card._linkedPreview.classList.remove("is-visible");
+            }
+            activePreview = null;
+          });
+        });
+
+        // Make the active preview follow the mouse
+        document.addEventListener("mousemove", (e) => {
+          if (activePreview) {
+            // Positioned perfectly next to the cursor
+            activePreview.style.left = e.clientX + 24 + "px";
+            activePreview.style.top = e.clientY - 120 + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

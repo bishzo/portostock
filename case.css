@@ -1,0 +1,438 @@
+/* ══════════════════════════════════════════
+   ZORU — case.css  (shared across all case study pages)
+   ══════════════════════════════════════════ */
+
+/* ── HERO MOCKUP ── */
+.cs-hero {
+  padding: 120px var(--px) 0;
+  max-width: calc(var(--w) + var(--px) * 2);
+  margin: 0 auto;
+}
+.cs-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.cs-hero__back {
+  font-family: var(--f-sans);
+  font-size: 12px;
+  color: var(--ink-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s var(--ease);
+}
+.cs-hero__back:hover {
+  color: var(--ink);
+}
+.cs-hero__tag {
+  font-family: var(--f-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent-bg);
+  background: var(--accent-bg);
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+/* Mockup frame */
+.cs-mockup {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+/* REPLACE LINE: swap the div.cs-mockup__ph with an <img> tag — src="your-mockup.jpg" alt="..." style="width:100%;height:100%;object-fit:cover;border-radius:20px 20px 0 0;" */
+.cs-mockup__ph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.cs-mockup__ph span {
+  font-family: var(--f-sans);
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+}
+.cs-mockup__label {
+  font-family: var(--f-serif);
+  font-size: clamp(24px, 3vw, 40px);
+  color: var(--ink);
+  opacity: 0.15;
+}
+
+/* ── META STRIP ── */
+.cs-meta {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 48px var(--px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+}
+.cs-meta__cell {
+  background: var(--bg);
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cs-meta__cell:first-child {
+  border-radius: 0 0 0 20px;
+}
+.cs-meta__cell:last-child {
+  border-radius: 0 0 20px 0;
+}
+.cs-meta__label {
+  font-family: var(--f-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.cs-meta__val {
+  font-family: var(--f-serif);
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* ── OVERVIEW ── */
+.cs-overview {
+  padding: 96px var(--px);
+  max-width: calc(var(--w) + var(--px) * 2);
+  margin: 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+.cs-overview__inner {
+  max-width: var(--w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+}
+.cs-overview__pull {
+  font-family: var(--f-serif);
+  font-size: clamp(22px, 2.5vw, 34px);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+.cs-overview__body {
+  font-family: var(--f-sans);
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.75;
+  max-width: 60ch;
+}
+
+/* ── CARDS STRIP (horizontal scroll) ── */
+.cs-cards {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line);
+  overflow: visible;
+  background: var(--ink);
+  position: relative;
+  z-index: 0;
+}
+.cs-cards__header {
+  max-width: var(--w);
+  margin: 0 auto;
+  padding: 0 var(--px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.cs-cards .section-label,
+.cs-cards .section-num,
+.cs-cards .cs-cards__hint {
+  color: rgba(255, 255, 255, 0.35);
+}
+.cs-cards .cs-cards__hint svg path {
+  stroke: rgba(255, 255, 255, 0.35);
+}
+.cs-card:hover {
+  border-color: #8db88a;
+}
+.cs-card__num {
+  color: rgba(255, 255, 255, 0.06);
+}
+.cs-card__problem {
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+.cs-card__title {
+  color: #f5f4f1;
+}
+.cs-card__body {
+  color: rgba(255, 255, 255, 0.4);
+}
+.cs-card__solution {
+  background: rgba(141, 184, 138, 0.12);
+  color: #8db88a;
+}
+.cs-cards__hint {
+  font-family: var(--f-sans);
+  font-size: 11px;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cs-cards__hint svg {
+  opacity: 0.5;
+}
+
+.cs-cards__track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Increased top padding from 4px to 24px to give the cards room to pop out */
+  padding: 24px clamp(16px, 3vw, 48px) 40px;
+  /* Added negative margin to pull the container up, keeping your original spacing intact */
+  margin-top: -20px;
+  scroll-padding-left: clamp(16px, 3vw, 48px);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  cursor: grab;
+}
+.cs-cards__track::-webkit-scrollbar {
+  display: none;
+}
+.cs-cards__track:active {
+  cursor: grabbing;
+}
+
+.cs-card {
+  flex: 0 0 360px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 36px 32px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Slower, premium transition for the pop-out */
+  transition:
+    border-color 0.5s var(--ease-out),
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.cs-card:hover {
+  border-color: var(--accent);
+  /* Pops out towards the user and lifts up */
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+}
+.cs-card__num {
+  font-family: var(--f-serif);
+  font-size: 48px;
+  color: var(--ink);
+  opacity: 0.08;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.cs-card__problem {
+  font-family: var(--f-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.cs-card__title {
+  font-family: var(--f-serif);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.cs-card__body {
+  font-family: var(--f-sans);
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.7;
+  flex: 1;
+}
+.cs-card__solution {
+  padding: 16px;
+  background: var(--accent-bg);
+  border-radius: 10px;
+  font-family: var(--f-sans);
+  font-size: 12px;
+  color: var(--accent);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* drag scroll JS helper — cursor */
+.cs-cards__track.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+/* ── FOOTER CTA ── */
+.cs-end {
+  padding: 96px var(--px);
+  max-width: calc(var(--w) + var(--px) * 2);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+.cs-end__left h2 {
+  font-family: var(--f-serif);
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.cs-end__left p {
+  font-family: var(--f-sans);
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.cs-end__nav {
+  display: flex;
+  gap: 16px;
+}
+.cs-end__btn {
+  font-family: var(--f-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-3);
+  border: 1px solid var(--line);
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.2s var(--ease);
+}
+.cs-end__btn:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.cs-end__btn--primary {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.cs-end__btn--primary:hover {
+  background: var(--ink-2);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .cs-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cs-overview__inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cs-end {
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 640px) {
+  .cs-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cs-card {
+    flex: 0 0 300px;
+  }
+  .cs-end__nav {
+    flex-direction: column;
+  }
+}
+/* Card hover mockup */
+.cs-card {
+  position: relative;
+  overflow: visible;
+}
+.cs-card__preview {
+  position: fixed;
+  width: 280px; /* Slightly larger for better visibility */
+  aspect-ratio: 4/3;
+  border-radius: 14px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.9) translateY(10px) rotate(-2deg);
+  /* Smooth float-in animation */
+  transition:
+    opacity 0.3s var(--ease-out),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 9999; /* Forces it to the absolute front */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #2a2a26;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.cs-card__preview.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0) rotate(-1deg);
+}
+.cs-card__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* REPLACE img with this ph span until you have real mockups */
+.cs-card__preview-ph {
+  font-family: var(--f-sans);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+}
+.cs-card__preview.is-visible {
+  opacity: 1;
+  transform: scale(1) rotate(-1deg);
+}
+/* ── SCROLLBAR PILL ── */
+.cs-cards__scrollbar {
+  width: 120px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+  margin: 8px auto 0;
+  overflow: hidden;
+  position: relative;
+}
+.cs-cards__scrollbar-thumb {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 99px;
+  width: 30%;
+  position: absolute;
+  left: 0;
+  transition: left 0.1s linear;
+}

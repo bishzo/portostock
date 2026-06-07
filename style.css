@@ -17,8 +17,8 @@
   --f-serif: "DM Serif Display", Georgia, serif;
   --f-sans: "DM Sans", system-ui, sans-serif;
 
-  --w: 1200px;
-  --px: clamp(20px, 5vw, 72px);
+  --w: 960px;
+  --px: clamp(24px, 4vw, 80px);
   --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-out: cubic-bezier(0, 0, 0.3, 1);
 }
@@ -67,7 +67,8 @@ img {
   pointer-events: none;
   width: 36px;
   height: 36px;
-  background: white;
+  background: transparent;
+  border: 2px solid white;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition:
@@ -656,6 +657,8 @@ body.cursor-hover .cursor-dot {
 }
 
 .work__list {
+  max-width: var(--w);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -782,6 +785,7 @@ body.cursor-hover .cursor-dot {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 .work-row__thumb-ph {
   width: 100%;
@@ -886,6 +890,8 @@ body.cursor-hover .cursor-dot {
   margin-bottom: 48px;
 }
 .thoughts__list {
+  max-width: var(--w);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -1122,5 +1128,150 @@ body.cursor-hover .cursor-dot {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+}
+/* ── INTERACTIVE CANVAS HERO ── */
+.hero__canvas-wrapper {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(20, 20, 18, 0.02);
+}
+
+.hero__canvas-grid {
+  width: 80%;
+  height: 80%;
+  border: 1px dashed var(--line);
+  position: relative;
+  background-image:
+    linear-gradient(to right, rgba(221, 220, 218, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(221, 220, 218, 0.4) 1px, transparent 1px);
+  background-size: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.hero__canvas-wrapper:hover .hero__canvas-grid {
+  transform: scale(1.03) rotate(1deg);
+}
+
+.canvas-node {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background: white;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  font-family: var(--f-sans);
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition:
+    border-color 0.4s,
+    color 0.4s,
+    background 0.4s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  cursor: grab;
+  touch-action: none;
+  z-index: 2;
+}
+
+.node-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--line);
+  transition: background 0.3s var(--ease);
+}
+
+.node--1 {
+  top: 20%;
+  left: 15%;
+}
+.node--2 {
+  top: 55%;
+  right: 10%;
+}
+.node--3 {
+  bottom: 15%;
+  left: 25%;
+}
+
+/* Default Hover state */
+.canvas-node:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(20, 20, 18, 0.04);
+}
+
+.canvas-node:hover .node-dot {
+  background: var(--accent);
+}
+
+/* Active Dragging state */
+.canvas-node.is-dragging {
+  cursor: grabbing;
+  transform: scale(1.08) !important;
+  box-shadow: 0 16px 32px rgba(20, 20, 18, 0.1) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+  background: var(--accent-bg);
+  z-index: 10;
+}
+
+.canvas-node.is-dragging .node-dot {
+  background: var(--accent);
+}
+
+/* Subtle grid glow when actively playing with it */
+.hero__canvas-grid.is-active {
+  border-color: var(--accent);
+  background-image:
+    linear-gradient(to right, rgba(141, 184, 138, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(141, 184, 138, 0.2) 1px, transparent 1px);
+}
+
+.canvas-vector-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  top: 45%;
+  animation: canvasScan 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes canvasScan {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(180px);
+    opacity: 0;
   }
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redesign Project — Case Study · Zoru</title>
+    <title>YouTube Redesign — Case Study · Zoru</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,9 +25,7 @@
       <ul class="nav__links" style="margin-left: auto">
         <li><a href="about.html" class="nav__link">Profile & Work</a></li>
         <li>
-          <a href="about.html#contact" class="nav__link nav__link--hi"
-            >Say hi ↗</a
-          >
+          <a href="about.html#contact" class="nav__link nav__link--hi">Say hi ↗</a>
         </li>
       </ul>
     </nav>
@@ -36,14 +34,13 @@
     <div class="cs-hero" data-reveal>
       <div class="cs-hero__eyebrow">
         <a href="about.html" class="cs-hero__back">← Back to work</a>
-        <!-- REPLACE: update tag text to match project type -->
-        <span class="cs-hero__tag">[Project Type]</span>
+        <span class="cs-hero__tag">Interface Redesign</span>
       </div>
 
-      <!-- REPLACE: swap .cs-mockup__ph with <img src="assets/images/redesign-mockup.jpg" alt="[Project name] mockup" style="width:100%;height:100%;object-fit:cover;border-radius:20px 20px 0 0;"> -->
+      <!-- REPLACE: swap .cs-mockup__ph with your hero mockup image -->
       <div class="cs-mockup">
         <div class="cs-mockup__ph">
-          <span class="cs-mockup__label">[Project Name]</span>
+          <span class="cs-mockup__label">YouTube Redesign</span>
           <span>[ Drop mockup image here — 16:9 ]</span>
         </div>
       </div>
@@ -51,23 +48,19 @@
       <div class="cs-meta">
         <div class="cs-meta__cell">
           <span class="cs-meta__label">Project</span>
-          <!-- REPLACE: project name -->
-          <span class="cs-meta__val">[Project Name]</span>
+          <span class="cs-meta__val">YouTube Redesign</span>
         </div>
         <div class="cs-meta__cell">
           <span class="cs-meta__label">Type</span>
-          <!-- REPLACE: type -->
-          <span class="cs-meta__val">[Type]</span>
+          <span class="cs-meta__val">Interface Redesign</span>
         </div>
         <div class="cs-meta__cell">
           <span class="cs-meta__label">Year</span>
-          <!-- REPLACE: year -->
-          <span class="cs-meta__val">[Year]</span>
+          <span class="cs-meta__val">2025</span>
         </div>
         <div class="cs-meta__cell">
           <span class="cs-meta__label">Role</span>
-          <!-- REPLACE: your role -->
-          <span class="cs-meta__val">[Role]</span>
+          <span class="cs-meta__val">UI/UX Designer</span>
         </div>
       </div>
     </div>
@@ -80,14 +73,18 @@
           <span class="section-num">(01)</span>
         </div>
         <div>
-          <!-- REPLACE: one-line pull quote for the project -->
           <p class="cs-overview__pull">
-            [One strong pull quote about the project — what problem it solves.]
+            The world's largest video platform — redesigned to actually respect
+            the people watching it.
           </p>
-          <!-- REPLACE: 2–3 sentence project description -->
           <p class="cs-overview__body">
-            [Project description — what it is, when it was built, purpose or
-            client context.]
+            YouTube's interface has accumulated years of competing priorities —
+            monetisation, recommendations, shorts, ads — layered on top of each
+            other without a coherent visual system underneath. This conceptual
+            redesign audits the core viewing experience and rebuilds it around
+            one principle: the video should always win. The project covers the
+            homepage, watch page, and search results — the three screens where
+            friction is highest and attention is most fragile.
           </p>
         </div>
       </div>
@@ -97,8 +94,7 @@
     <section class="cs-cards" data-reveal>
       <div class="cs-cards__header">
         <div>
-          <!-- REPLACE: update section label to match (e.g. "/ Design Decisions" or "/ Problems Solved") -->
-          <span class="section-label">/ [Section Label]</span>
+          <span class="section-label">/ Design Decisions</span>
           <span class="section-num">(02)</span>
         </div>
         <span class="cs-cards__hint">
@@ -116,37 +112,150 @@
       </div>
 
       <div class="cs-cards__track" id="redesign-track">
-        <!-- REPLACE: duplicate this block for each card, fill in content -->
+
         <div class="cs-card">
+          <div class="cs-card__preview">
+            <!-- REPLACE: <img src="assets/YT card 1.png" alt="YouTube Redesign Mockup 1" /> -->
+            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 1 mockup</div>
+          </div>
           <span class="cs-card__num">01</span>
-          <p class="cs-card__problem">[Problem Label]</p>
+          <p class="cs-card__problem">Visual Hierarchy Collapse</p>
           <h3 class="cs-card__title">
-            [Card headline — the friction or insight]
+            Thumbnails, ads, and Shorts all compete at the same visual weight.
           </h3>
           <p class="cs-card__body">
-            [2–3 sentences describing the before state — the real-world
-            problem.]
+            The homepage treats every piece of content identically — a 3-minute
+            vlog, a 2-hour documentary, and a sponsored post all share the same
+            card size, the same thumbnail ratio, and the same label treatment.
+            The eye has nowhere to land.
           </p>
           <div class="cs-card__solution">
-            [Solution — what you designed to fix it.]
+            A tiered card system — large editorial cards for long-form content,
+            compact rows for shorts, and a clear visual separator for promoted
+            content. Hierarchy is restored without removing any content type.
           </div>
         </div>
 
         <div class="cs-card">
+          <div class="cs-card__preview">
+            <!-- REPLACE: <img src="assets/YT card 2.png" alt="YouTube Redesign Mockup 2" /> -->
+            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 2 mockup</div>
+          </div>
           <span class="cs-card__num">02</span>
-          <p class="cs-card__problem">[Problem Label]</p>
-          <h3 class="cs-card__title">[Card headline]</h3>
-          <p class="cs-card__body">[Problem description.]</p>
-          <div class="cs-card__solution">[Solution.]</div>
+          <p class="cs-card__problem">Watch Page Clutter</p>
+          <h3 class="cs-card__title">
+            The video is the smallest thing on the watch page.
+          </h3>
+          <p class="cs-card__body">
+            On a typical 1080p screen, the video player competes with a comment
+            section, an autoplay queue, channel info, action buttons, a
+            description accordion, and a banner ad — all visible above the fold
+            simultaneously.
+          </p>
+          <div class="cs-card__solution">
+            A focused watch mode collapses secondary elements until the user
+            signals intent — comments expand on scroll, the queue slides in on
+            hover. The player takes 70% of the viewport by default.
+          </div>
         </div>
 
         <div class="cs-card">
+          <div class="cs-card__preview">
+            <!-- REPLACE: <img src="assets/YT card 3.png" alt="YouTube Redesign Mockup 3" /> -->
+            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 3 mockup</div>
+          </div>
           <span class="cs-card__num">03</span>
-          <p class="cs-card__problem">[Problem Label]</p>
-          <h3 class="cs-card__title">[Card headline]</h3>
-          <p class="cs-card__body">[Problem description.]</p>
-          <div class="cs-card__solution">[Solution.]</div>
+          <p class="cs-card__problem">Search Result Noise</p>
+          <h3 class="cs-card__title">
+            Search returns a mix of videos, ads, playlists, and Shorts with no
+            clear distinction.
+          </h3>
+          <p class="cs-card__body">
+            A query for a tutorial returns paid promotions, algorithmically
+            recommended tangents, and unrelated Shorts in the same list as the
+            actual result — with no visual or structural way to tell them apart
+            at a glance.
+          </p>
+          <div class="cs-card__solution">
+            Search results are grouped by content type with a sticky filter bar:
+            Videos, Playlists, Channels, Shorts. Promoted content is labelled
+            clearly and visually offset — present but not disguised.
+          </div>
         </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <!-- REPLACE: <img src="assets/YT card 4.png" alt="YouTube Redesign Mockup 4" /> -->
+            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 4 mockup</div>
+          </div>
+          <span class="cs-card__num">04</span>
+          <p class="cs-card__problem">Dark Mode Inconsistency</p>
+          <h3 class="cs-card__title">
+            Dark mode is surface-level — just grey boxes, not a real dark
+            system.
+          </h3>
+          <p class="cs-card__body">
+            YouTube's dark mode swaps white backgrounds for mid-grey (#212121)
+            but leaves the elevation model, shadow system, and component
+            contrast ratios largely unchanged. It feels like a filter, not a
+            designed mode.
+          </p>
+          <div class="cs-card__solution">
+            A true dark system built with layered surfaces — near-black base,
+            elevated cards at distinct tonal steps, and reduced-saturation
+            accents. Thumbnails remain the brightest elements in the viewport by
+            design.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <!-- REPLACE: <img src="assets/YT card 5.png" alt="YouTube Redesign Mockup 5" /> -->
+            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 5 mockup</div>
+          </div>
+          <span class="cs-card__num">05</span>
+          <p class="cs-card__problem">Thumbnail Metadata Overload</p>
+          <h3 class="cs-card__title">
+            Every card carries five lines of metadata before you've decided to
+            watch.
+          </h3>
+          <p class="cs-card__body">
+            Title (two lines), channel name, view count, upload date, and
+            duration badge — all stacked below every thumbnail. On a grid of 12
+            cards, that's 60 lines of text competing for attention before a
+            single decision is made.
+          </p>
+          <div class="cs-card__solution">
+            Progressive disclosure on cards — thumbnail and title only at rest.
+            Channel, date, and view count appear on hover as a subtle overlay.
+            Duration badge stays visible always as it affects watch intent
+            directly.
+          </div>
+        </div>
+
+        <div class="cs-card">
+          <div class="cs-card__preview">
+            <!-- REPLACE: <img src="assets/YT card 6.png" alt="YouTube Redesign Mockup 6" /> -->
+            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 6 mockup</div>
+          </div>
+          <span class="cs-card__num">06</span>
+          <p class="cs-card__problem">Navigation Sprawl</p>
+          <h3 class="cs-card__title">
+            The sidebar has 22 items — and none of them feel primary.
+          </h3>
+          <p class="cs-card__body">
+            Home, Shorts, Subscriptions, Library, History, Watch Later,
+            trending, music, gaming, news, sports, fashion — all at the same
+            visual weight in a single scrollable column. The result is a nav
+            that communicates nothing about what matters.
+          </p>
+          <div class="cs-card__solution">
+            A collapsed sidebar with four primary destinations — Home,
+            Subscriptions, Library, Explore. Everything else lives under Explore
+            as a contextual grid. The sidebar expands on intent, not by default.
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -154,15 +263,11 @@
     <div class="cs-end" data-reveal>
       <div class="cs-end__left">
         <h2>Next project</h2>
-        <!-- REPLACE: next project description -->
-        <p>[Next project one-liner]</p>
+        <p>Social platform for gamers — mobile app, React Native</p>
       </div>
       <div class="cs-end__nav">
-        <a href="savepoint.html" class="cs-end__btn">← SAVEPOINT</a>
-        <!-- REPLACE: link to next project page -->
-        <a href="coming-soon.html" class="cs-end__btn cs-end__btn--primary"
-          >Next →</a
-        >
+        <a href="zive.html" class="cs-end__btn">← ZIVE</a>
+        <a href="savepoint.html" class="cs-end__btn cs-end__btn--primary">SAVEPOINT →</a>
       </div>
     </div>
 
@@ -172,16 +277,8 @@
         <span class="footer__copy">© 2025 — Bengaluru, India</span>
         <div class="footer__links">
           <a href="mailto:hello@zoru.design" class="footer__link">Email</a>
-          <a
-            href="https://linkedin.com/in/zoru"
-            class="footer__link"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn</a
-          >
-          <a href="assets/zoru-resume.pdf" class="footer__link" download
-            >Resume ↓</a
-          >
+          <a href="https://linkedin.com/in/zoru" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="assets/zoru-resume.pdf" class="footer__link" download>Resume ↓</a>
         </div>
       </div>
     </footer>
@@ -190,14 +287,8 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const track = document.querySelector(".cs-cards__track");
-        let isDown = false,
-          startX,
-          scrollLeft,
-          velX = 0,
-          lastX,
-          rafId;
+        let isDown = false, startX, scrollLeft, velX = 0, lastX, rafId;
 
-        // ── Horizontal Drag & Scroll Logic ──
         if (track) {
           track.addEventListener("mousedown", (e) => {
             isDown = true;
@@ -232,16 +323,12 @@
             lastX = e.pageX;
           });
 
-          track.addEventListener(
-            "wheel",
-            (e) => {
-              if (e.deltaY !== 0) {
-                e.preventDefault();
-                track.scrollLeft += e.deltaY;
-              }
-            },
-            { passive: false },
-          );
+          track.addEventListener("wheel", (e) => {
+            if (e.deltaY !== 0) {
+              e.preventDefault();
+              track.scrollLeft += e.deltaY;
+            }
+          }, { passive: false });
         }
 
         // ── Card Hover & Mockup Preview Logic ──
@@ -249,11 +336,8 @@
 
         document.querySelectorAll(".cs-card").forEach((card) => {
           const preview = card.querySelector(".cs-card__preview");
-
           if (preview) {
-            // Detach preview from card to avoid CSS transform clipping, move to body
             document.body.appendChild(preview);
-            // Link the preview back to the card object in memory
             card._linkedPreview = preview;
           }
 
@@ -272,10 +356,8 @@
           });
         });
 
-        // Make the active preview follow the mouse
         document.addEventListener("mousemove", (e) => {
           if (activePreview) {
-            // Positioned perfectly next to the cursor
             activePreview.style.left = e.clientX + 24 + "px";
             activePreview.style.top = e.clientY - 120 + "px";
           }

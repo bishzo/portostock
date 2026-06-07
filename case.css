@@ -222,6 +222,9 @@
 }
 .cs-cards__track:active {
   cursor: grabbing;
+  -webkit-font-smoothing: antialiased;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .cs-card {
@@ -239,11 +242,16 @@
     transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 .cs-card:hover {
   border-color: var(--accent);
   /* Pops out towards the user and lifts up */
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-4px) translateZ(0); /* whatever your hover transform is, append translateZ(0) */
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
 }
 .cs-card__num {

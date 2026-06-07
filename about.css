@@ -104,6 +104,16 @@
   border-radius: 12px;
   margin-bottom: 12px;
 }
+/* Smoothly transition the new images */
+.gallery-card__image img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform; /* Safe to use here because it's just an image, not text! */
+}
+
+/* Zoom the image by 10% when the user hovers over the card */
+.gallery-card:hover .gallery-card__image img {
+  transform: scale(1.1);
+}
 .gallery-card__image-ph {
   width: 100%;
   height: 100%;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zoru — UI/UX Designer</title>
+    <title>Bishzo — UI/UX Designer</title>
     <meta
       name="description"
       content="UI/UX Designer designing considered digital products and interfaces. Based in Bengaluru."
@@ -23,7 +23,7 @@
 
     <!-- ═══ NAV ═══ -->
     <nav class="nav" id="nav">
-      <a href="/" class="nav__mark">./zoru</a>
+      <a href="/" class="nav__mark">./bishzo</a>
       <div class="nav__center">
         <span class="nav__date" id="nav-date"></span>
       </div>
@@ -41,48 +41,58 @@
     <section class="hero">
       <div class="hero__top">
         <span class="hero__stamp">UI/UX Designer</span>
-        <span class="hero__stamp hero__stamp--right">©2025</span>
+        <span
+          class="hero__stamp hero__stamp--right"
+          style="
+            background: var(--ink);
+            color: var(--bg);
+            padding: 6px 16px;
+            border-radius: 99px;
+          "
+          >Available for hire</span
+        >
       </div>
+
       <div class="hero__body">
-        <h1 class="hero__title">
-          <span class="hero__title-line" data-line="1">Designing</span>
-          <span class="hero__title-line hero__title-line--indent" data-line="2"
-            ><em>considered</em></span
-          >
-          <span class="hero__title-line" data-line="3">interfaces.</span>
-        </h1>
-        <div class="hero__portrait-col">
-          <div class="hero__canvas-wrapper">
-            <div class="hero__canvas-grid" id="canvas-sandbox">
-              <div class="canvas-node node--1">
-                <div class="node-dot"></div>
-                <span>System</span>
-              </div>
-              <div class="canvas-node node--2">
-                <div class="node-dot"></div>
-                <span>Intent</span>
-              </div>
-              <div class="canvas-node node--3">
-                <div class="node-dot"></div>
-                <span>MVP</span>
-              </div>
-              <div class="canvas-vector-line"></div>
+        <!-- Seamless Looping Marquee -->
+        <div class="hero__marquee-wrapper">
+          <div class="hero__marquee">
+            <!-- Group 1 -->
+            <div class="marquee-group">
+              <span>BISHES</span>
+              <span class="name-line-inline"></span>
+              <span>PHUKON</span>
+              <span class="name-line-inline"></span>
             </div>
-            <div class="hero__portrait-tag">
-              <div class="hero__dot"></div>
-              <span>Interactive Blueprint Sandbox — V3.0</span>
+            <!-- Group 2 -->
+            <div class="marquee-group">
+              <span>BISHES</span>
+              <span class="name-line-inline"></span>
+              <span>PHUKON</span>
+              <span class="name-line-inline"></span>
+            </div>
+            <!-- Group 3 -->
+            <div class="marquee-group">
+              <span>BISHES</span>
+              <span class="name-line-inline"></span>
+              <span>PHUKON</span>
+              <span class="name-line-inline"></span>
+            </div>
+            <!-- Group 4 -->
+            <div class="marquee-group">
+              <span>BISHES</span>
+              <span class="name-line-inline"></span>
+              <span>PHUKON</span>
+              <span class="name-line-inline"></span>
             </div>
           </div>
         </div>
-      </div>
-      <div class="hero__bottom">
-        <p class="hero__sub">
-          Junior UI/UX Designer — building digital products at the intersection
-          of craft and clarity.
+
+        <p class="hero__intro">
+          I design and develop digital experiences that bring ideas to life,
+          blending creativity and technology to craft brands, products, and
+          interfaces that are intuitive, inspiring, and built to last.
         </p>
-        <a href="about.html" class="hero__cta"
-          >View profile & work <span class="hero__arrow">→</span></a
-        >
       </div>
     </section>
 
@@ -117,7 +127,7 @@
         </div>
         <div class="about__content">
           <p class="about__pull">
-            I'm Zoru — a UI/UX designer and developer based in Bengaluru,
+            I'm Bishes — a UI/UX designer and developer based in Bengaluru,
             focused on building products that are as considered in their craft
             as they are in their function.
           </p>
@@ -141,7 +151,6 @@
     </section>
 
     <!-- ═══ SERVICES ═══ -->
-    <!-- ═══ SERVICES ═══ -->
     <section class="services" data-reveal>
       <div class="services__inner">
         <div class="services__header">
@@ -153,43 +162,122 @@
           >
         </div>
         <div class="services__list">
-          <div class="service-item">
+          <div class="service-item" data-service>
             <div class="service-item__info">
               <span class="service-item__num">01</span>
               <h3 class="service-item__name">UI Design</h3>
             </div>
             <div class="service-item__media">
-              <div class="service-item__media-ph">UI Design</div>
+              <img
+                src="assets/Ui mock main.png"
+                alt="UI Design Mockup"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="service-item__expand">
+              <p class="service-item__desc">
+                Screens that work and look like they mean it. I design
+                interfaces from the ground up — every component, every state,
+                every detail considered.
+              </p>
+              <div class="service-item__tags">
+                <span class="service-tag">Product Design</span>
+                <span class="service-tag">Web Design</span>
+                <span class="service-tag">Typography</span>
+                <span class="service-tag">Design Systems</span>
+                <span class="service-tag">Interaction Design</span>
+                <span class="service-tag">Prototyping</span>
+                <span class="service-tag">UI</span>
+                <span class="service-tag">UX</span>
+                <span class="service-tag">Front-End Development</span>
+                <span class="service-tag">Pitch Deck Design</span>
+              </div>
             </div>
           </div>
 
-          <div class="service-item">
+          <div class="service-item" data-service>
             <div class="service-item__info">
               <span class="service-item__num">02</span>
               <h3 class="service-item__name">UX Research</h3>
             </div>
             <div class="service-item__media">
-              <div class="service-item__media-ph">UX Research</div>
+              <img
+                src="assets/Ux mock main.png"
+                alt="UX Research Mockup"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="service-item__expand">
+              <p class="service-item__desc">
+                Design without research is guesswork. I dig into user behavior,
+                map the friction, and turn findings into decisions that actually
+                move the product forward.
+              </p>
+              <div class="service-item__tags">
+                <span class="service-tag">User Interviews</span>
+                <span class="service-tag">Competitive Analysis</span>
+                <span class="service-tag">Personas</span>
+                <span class="service-tag">Journey Mapping</span>
+                <span class="service-tag">Usability Testing</span>
+                <span class="service-tag">Information Architecture</span>
+                <span class="service-tag">Wireframing</span>
+              </div>
             </div>
           </div>
 
-          <div class="service-item">
+          <div class="service-item" data-service>
             <div class="service-item__info">
               <span class="service-item__num">03</span>
               <h3 class="service-item__name">Product Design</h3>
             </div>
             <div class="service-item__media">
-              <div class="service-item__media-ph">Product Design</div>
+              <img
+                src="assets/PD mock main.png"
+                alt="Product Design Mockup"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="service-item__expand">
+              <p class="service-item__desc">
+                From zero to shipped. I own the full design arc — research,
+                flows, high-fidelity, handoff. Built to be handed to a developer
+                and actually used.
+              </p>
+              <div class="service-item__tags">
+                <span class="service-tag">End-to-End Design</span>
+                <span class="service-tag">Mobile App Design</span>
+                <span class="service-tag">SaaS Interfaces</span>
+                <span class="service-tag">Design Handoff</span>
+                <span class="service-tag">Component Libraries</span>
+              </div>
             </div>
           </div>
 
-          <div class="service-item">
+          <div class="service-item" data-service>
             <div class="service-item__info">
               <span class="service-item__num">04</span>
               <h3 class="service-item__name">Design Direction</h3>
             </div>
             <div class="service-item__media">
-              <div class="service-item__media-ph">Design Direction</div>
+              <img
+                src="assets/DD mock main.png"
+                alt="Design Direction Mockup"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <div class="service-item__expand">
+              <p class="service-item__desc">
+                Not just how it looks — what it says and why. I shape visual
+                identity and creative strategy so every touchpoint feels
+                deliberate, not accidental.
+              </p>
+              <div class="service-item__tags">
+                <span class="service-tag">Visual Strategy</span>
+                <span class="service-tag">Moodboarding</span>
+                <span class="service-tag">Creative Direction</span>
+                <span class="service-tag">Brand Identity</span>
+                <span class="service-tag">Art Direction</span>
+              </div>
             </div>
           </div>
         </div>
@@ -374,12 +462,12 @@
     <!-- ═══ FOOTER ═══ -->
     <footer class="footer">
       <div class="footer__inner">
-        <span class="footer__mark">./zoru</span>
+        <span class="footer__mark">./bishzo</span>
         <span class="footer__copy">© 2025 — Bengaluru, India</span>
         <div class="footer__links">
-          <a href="mailto:hello@zoru.design" class="footer__link">Email</a>
+          <a href="mailto:hello@bishzo.design" class="footer__link">Email</a>
           <a
-            href="https://linkedin.com/in/zoru"
+            href="https://linkedin.com/in/bishzo"
             class="footer__link"
             target="_blank"
             rel="noopener"

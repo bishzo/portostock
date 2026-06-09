@@ -287,3 +287,24 @@ if (canvasNodes.length > 0 && canvasSandbox) {
   // Start the engine
   requestAnimationFrame(physicsLoop);
 }
+// ── SERVICE ACCORDION ──
+document.querySelectorAll("[data-service]").forEach((item) => {
+  const info = item.querySelector(".service-item__info");
+  const media = item.querySelector(".service-item__media");
+  const expand = item.querySelector(".service-item__expand");
+
+  // Restructure: wrap info + media into a top-row div
+  const topRow = document.createElement("div");
+  topRow.className = "service-item__top-row";
+  topRow.appendChild(info);
+  topRow.appendChild(media);
+  item.insertBefore(topRow, expand);
+
+  // Wrap expand contents in inner div for grid-rows animation
+  const expandContent = expand.innerHTML;
+  expand.innerHTML = `<div class="service-item__expand-inner">${expandContent}</div>`;
+
+  item.addEventListener("click", () => {
+    item.classList.toggle("is-active");
+  });
+});

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YouTube Redesign — Case Study · Zoru</title>
+    <title>YouTube Redesign — Case Study · Bishzo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,14 +18,16 @@
     <div class="cursor-dot" id="cursor-dot"></div>
 
     <nav class="nav" id="nav">
-      <a href="index.html" class="nav__mark">./zoru</a>
+      <a href="index.html" class="nav__mark">./bishzo</a>
       <div class="nav__center">
         <span class="nav__date" id="nav-date"></span>
       </div>
       <ul class="nav__links" style="margin-left: auto">
         <li><a href="about.html" class="nav__link">Profile & Work</a></li>
         <li>
-          <a href="about.html#contact" class="nav__link nav__link--hi">Say hi ↗</a>
+          <a href="about.html#contact" class="nav__link nav__link--hi"
+            >Say hi ↗</a
+          >
         </li>
       </ul>
     </nav>
@@ -39,10 +41,11 @@
 
       <!-- REPLACE: swap .cs-mockup__ph with your hero mockup image -->
       <div class="cs-mockup">
-        <div class="cs-mockup__ph">
-          <span class="cs-mockup__label">YouTube Redesign</span>
-          <span>[ Drop mockup image here — 16:9 ]</span>
-        </div>
+        <img
+          src="assets/Redesign main MOCK.png"
+          alt="YouTube Redesign Mockup"
+          class="cs-mockup__img"
+        />
       </div>
 
       <div class="cs-meta">
@@ -112,11 +115,18 @@
       </div>
 
       <div class="cs-cards__track" id="redesign-track">
-
         <div class="cs-card">
           <div class="cs-card__preview">
-            <!-- REPLACE: <img src="assets/YT card 1.png" alt="YouTube Redesign Mockup 1" /> -->
-            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 1 mockup</div>
+            <img
+              src="assets/YT card 1.png"
+              alt="YouTube Redesign Mockup 1"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              "
+            />
           </div>
           <span class="cs-card__num">01</span>
           <p class="cs-card__problem">Visual Hierarchy Collapse</p>
@@ -138,31 +148,46 @@
 
         <div class="cs-card">
           <div class="cs-card__preview">
-            <!-- REPLACE: <img src="assets/YT card 2.png" alt="YouTube Redesign Mockup 2" /> -->
-            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 2 mockup</div>
+            <img
+              src="assets/YT card 2.png"
+              alt="YouTube Redesign Mockup 2"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              "
+            />
           </div>
           <span class="cs-card__num">02</span>
-          <p class="cs-card__problem">Watch Page Clutter</p>
+          <p class="cs-card__problem">Shorts Immersion Break</p>
           <h3 class="cs-card__title">
-            The video is the smallest thing on the watch page.
+            Reading comments shouldn't shrink the experience.
           </h3>
           <p class="cs-card__body">
-            On a typical 1080p screen, the video player competes with a comment
-            section, an autoplay queue, channel info, action buttons, a
-            description accordion, and a banner ad — all visible above the fold
-            simultaneously.
+            In the current UI, opening the comment section on a Short minimizes
+            the video into a rigid, floating box. It disrupts the full-screen
+            vertical immersion completely just to display text.
           </p>
           <div class="cs-card__solution">
-            A focused watch mode collapses secondary elements until the user
-            signals intent — comments expand on scroll, the queue slides in on
-            hover. The player takes 70% of the viewport by default.
+            A seamless, transparent comment overlay. The rigid bounding box is
+            removed, allowing the video to continue playing edge-to-edge in the
+            background while the UI remains clean and open.
           </div>
         </div>
 
         <div class="cs-card">
           <div class="cs-card__preview">
-            <!-- REPLACE: <img src="assets/YT card 3.png" alt="YouTube Redesign Mockup 3" /> -->
-            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 3 mockup</div>
+            <img
+              src="assets/YT card 3.png"
+              alt="YouTube Redesign Mockup 3"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              "
+            />
           </div>
           <span class="cs-card__num">03</span>
           <p class="cs-card__problem">Search Result Noise</p>
@@ -185,77 +210,98 @@
 
         <div class="cs-card">
           <div class="cs-card__preview">
-            <!-- REPLACE: <img src="assets/YT card 4.png" alt="YouTube Redesign Mockup 4" /> -->
-            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 4 mockup</div>
+            <img
+              src="assets/YT card 4.png"
+              alt="YouTube Redesign Mockup 4"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              "
+            />
           </div>
           <span class="cs-card__num">04</span>
-          <p class="cs-card__problem">Dark Mode Inconsistency</p>
+          <p class="cs-card__problem">Curation & Feed Clarity</p>
           <h3 class="cs-card__title">
-            Dark mode is surface-level — just grey boxes, not a real dark
-            system.
+            Playlists are rigid, and subscription feeds lack chronological
+            focus.
           </h3>
           <p class="cs-card__body">
-            YouTube's dark mode swaps white backgrounds for mid-grey (#212121)
-            but leaves the elevation model, shadow system, and component
-            contrast ratios largely unchanged. It feels like a filter, not a
-            designed mode.
+            Standard playlists make it tedious to categorize saved videos.
+            Meanwhile, the Subscriptions tab can easily get overwhelmed by
+            high-volume uploaders, burying content from other creators you
+            follow.
           </p>
           <div class="cs-card__solution">
-            A true dark system built with layered surfaces — near-black base,
-            elevated cards at distinct tonal steps, and reduced-saturation
-            accents. Thumbnails remain the brightest elements in the viewport by
-            design.
+            A new customizable "Collections" system for fluid video
+            categorization, paired with an overhauled, timeline-based
+            Subscription feed. Videos are strictly grouped by day, ensuring you
+            never miss an upload.
           </div>
         </div>
 
         <div class="cs-card">
           <div class="cs-card__preview">
-            <!-- REPLACE: <img src="assets/YT card 5.png" alt="YouTube Redesign Mockup 5" /> -->
-            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 5 mockup</div>
+            <img
+              src="assets/YT card 5.png"
+              alt="YouTube Redesign Mockup 5"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              "
+            />
           </div>
           <span class="cs-card__num">05</span>
-          <p class="cs-card__problem">Thumbnail Metadata Overload</p>
+          <p class="cs-card__problem">History Page Navigation</p>
           <h3 class="cs-card__title">
-            Every card carries five lines of metadata before you've decided to
-            watch.
+            Finding a video from three days ago shouldn't be a scavenger hunt.
           </h3>
           <p class="cs-card__body">
-            Title (two lines), channel name, view count, upload date, and
-            duration badge — all stacked below every thumbnail. On a grid of 12
-            cards, that's 60 lines of text competing for attention before a
-            single decision is made.
+            The current history page is an endless, mixed dump of 10-second
+            Shorts, random clicks, and 2-hour podcasts. Finding a specific past
+            video relies entirely on endless scrolling and visual memory.
           </p>
           <div class="cs-card__solution">
-            Progressive disclosure on cards — thumbnail and title only at rest.
-            Channel, date, and view count appear on hover as a subtle overlay.
-            Duration badge stays visible always as it affects watch intent
-            directly.
+            A structured, timeline-based History architecture. Days are clearly
+            separated, and fast-paced Shorts are filtered into their own
+            distinct horizontal rows, keeping the main vertical feed clean for
+            long-form content.
           </div>
         </div>
 
         <div class="cs-card">
           <div class="cs-card__preview">
-            <!-- REPLACE: <img src="assets/YT card 6.png" alt="YouTube Redesign Mockup 6" /> -->
-            <div style="width:100%;height:100%;background:#edece8;display:flex;align-items:center;justify-content:center;font-size:11px;color:#7a7974;font-family:var(--f-sans);">Card 6 mockup</div>
+            <img
+              src="assets/YT card 6.png"
+              alt="YouTube Redesign Mockup 6"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+              "
+            />
           </div>
           <span class="cs-card__num">06</span>
-          <p class="cs-card__problem">Navigation Sprawl</p>
+          <p class="cs-card__problem">Watch Page Context</p>
           <h3 class="cs-card__title">
-            The sidebar has 22 items — and none of them feel primary.
+            Live chats and recommendations fight for the exact same real estate.
           </h3>
           <p class="cs-card__body">
-            Home, Shorts, Subscriptions, Library, History, Watch Later,
-            trending, music, gaming, news, sports, fashion — all at the same
-            visual weight in a single scrollable column. The result is a nav
-            that communicates nothing about what matters.
+            During live streams or premieres, the screen becomes a chaotic mess.
+            Users are forced to choose between engaging with the community or
+            discovering what to watch next, as both sections clash visually.
           </p>
           <div class="cs-card__solution">
-            A collapsed sidebar with four primary destinations — Home,
-            Subscriptions, Library, Explore. Everything else lives under Explore
-            as a contextual grid. The sidebar expands on intent, not by default.
+            Integrated toggle tabs built directly beside the player. Users can
+            seamlessly switch between the "Live Chat" view and the "Up Next"
+            recommendations within the same clean side-panel, keeping the
+            viewport tidy.
           </div>
         </div>
-
       </div>
     </section>
 
@@ -267,18 +313,28 @@
       </div>
       <div class="cs-end__nav">
         <a href="zive.html" class="cs-end__btn">← ZIVE</a>
-        <a href="savepoint.html" class="cs-end__btn cs-end__btn--primary">SAVEPOINT →</a>
+        <a href="savepoint.html" class="cs-end__btn cs-end__btn--primary"
+          >SAVEPOINT →</a
+        >
       </div>
     </div>
 
     <footer class="footer">
       <div class="footer__inner">
-        <span class="footer__mark">./zoru</span>
+        <span class="footer__mark">./bishzo</span>
         <span class="footer__copy">© 2025 — Bengaluru, India</span>
         <div class="footer__links">
           <a href="mailto:hello@zoru.design" class="footer__link">Email</a>
-          <a href="https://linkedin.com/in/zoru" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="assets/zoru-resume.pdf" class="footer__link" download>Resume ↓</a>
+          <a
+            href="https://linkedin.com/in/zoru"
+            class="footer__link"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="assets/zoru-resume.pdf" class="footer__link" download
+            >Resume ↓</a
+          >
         </div>
       </div>
     </footer>
@@ -287,7 +343,12 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const track = document.querySelector(".cs-cards__track");
-        let isDown = false, startX, scrollLeft, velX = 0, lastX, rafId;
+        let isDown = false,
+          startX,
+          scrollLeft,
+          velX = 0,
+          lastX,
+          rafId;
 
         if (track) {
           track.addEventListener("mousedown", (e) => {
@@ -323,12 +384,16 @@
             lastX = e.pageX;
           });
 
-          track.addEventListener("wheel", (e) => {
-            if (e.deltaY !== 0) {
-              e.preventDefault();
-              track.scrollLeft += e.deltaY;
-            }
-          }, { passive: false });
+          track.addEventListener(
+            "wheel",
+            (e) => {
+              if (e.deltaY !== 0) {
+                e.preventDefault();
+                track.scrollLeft += e.deltaY;
+              }
+            },
+            { passive: false },
+          );
         }
 
         // ── Card Hover & Mockup Preview Logic ──

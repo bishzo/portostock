@@ -966,6 +966,49 @@ body.cursor-hover .cursor-dot {
   color: #f5f4f1;
   border-color: rgba(255, 255, 255, 0.3);
 }
+.cta-socials {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--f-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  transition:
+    transform 0.3s var(--ease-out),
+    background 0.3s var(--ease),
+    border-color 0.3s var(--ease),
+    color 0.3s var(--ease);
+  will-change: transform;
+}
+
+.cta-social-link:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #f5f4f1;
+}
+
+.cta-social-link svg {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.cta-social-link:hover svg {
+  transform: scale(1.1);
+}
 
 /* ═══════════════════════════════
    FOOTER
@@ -1327,4 +1370,45 @@ body.cursor-hover .cursor-dot {
 .service-item.is-active .service-tag {
   color: rgba(255, 255, 255, 0.7);
   border-color: rgba(255, 255, 255, 0.2);
+}
+/* ── Socials Strip ── */
+.socials-strip {
+  padding: 48px var(--gap);
+  border-top: 1px solid rgba(20, 20, 18, 0.08);
+}
+.socials-strip__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.socials-strip__links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border: 1px solid rgba(20, 20, 18, 0.15);
+  border-radius: 99px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #141412;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+.social-link:hover {
+  background: #141412;
+  border-color: #141412;
+  color: #f5f4f1;
+}
+.social-link svg {
+  flex-shrink: 0;
 }

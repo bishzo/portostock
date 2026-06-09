@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile — Zoru</title>
+    <title>Profile — Bishes Phukon</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,13 +13,14 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="about.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body>
     <div class="cursor" id="cursor"></div>
     <div class="cursor-dot" id="cursor-dot"></div>
 
     <nav class="nav" id="nav">
-      <a href="index.html" class="nav__mark">./zoru</a>
+      <a href="index.html" class="nav__mark">./bishzo</a>
       <div class="nav__center">
         <span class="nav__date" id="nav-date"></span>
       </div>
@@ -42,9 +44,9 @@
 
           <div class="about-col__text">
             <p>
-              I'm Zoru — UI/UX designer and developer based in Bengaluru. I
-              build products at the intersection of how things look and how they
-              actually work.
+              I'm Bishes Phukon — UI/UX designer and developer based in
+              Bengaluru. I build products at the intersection of how things look
+              and how they actually work.
             </p>
             <p>
               Currently studying BCA at Kristu Jayanti College. Outside that: I
@@ -145,37 +147,41 @@
         </div>
 
         <div class="contact-box__right">
-          <form class="custom-form" onsubmit="event.preventDefault()">
+          <form class="custom-form" id="contact-form">
             <div class="form-row">
               <input
                 type="text"
+                name="from_name"
                 class="form-input"
                 placeholder="Your Name"
                 required
               />
               <input
                 type="email"
+                name="from_email"
                 class="form-input"
                 placeholder="Your Email"
                 required
               />
             </div>
-
             <textarea
+              name="message"
               class="form-input"
               placeholder="Give me a quick overview of your idea..."
               rows="1"
               required
             ></textarea>
 
-            <select class="form-input" required>
-              <option value="" disabled selected>
-                How quickly do you need this?
-              </option>
-              <option value="chill">No rush, just exploring</option>
-              <option value="soon">Within the next month</option>
-              <option value="asap">ASAP (Expedited)</option>
-            </select>
+            <input type="hidden" id="urgency-value" name="urgency" required />
+            <div class="pill-group">
+              <button type="button" class="pill" data-value="chill">
+                No Rush
+              </button>
+              <button type="button" class="pill" data-value="soon">
+                This Month
+              </button>
+              <button type="button" class="pill" data-value="asap">ASAP</button>
+            </div>
 
             <div class="form-actions">
               <button type="submit" class="cta-btn">Send message →</button>
@@ -189,24 +195,38 @@
               </button>
             </div>
           </form>
+          <div class="form-success" id="form-success">
+            <span class="form-success__check">✓</span>
+            <h3 class="form-success__title">Message received.</h3>
+            <p class="form-success__desc">I'll be in touch.</p>
+            <button
+              class="pill is-active"
+              id="form-success-ok"
+              style="margin-top: 32px; cursor: none"
+            >
+              Got it
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer__inner">
-        <span class="footer__mark">./zoru</span>
+        <span class="footer__mark">./bishzo</span>
         <span class="footer__copy">© 2025 — Bengaluru, India</span>
         <div class="footer__links">
-          <a href="mailto:hello@zoru.design" class="footer__link">Email</a>
+          <a href="mailto:phukonbishes04@gmail.com" class="footer__link"
+            >Email</a
+          >
           <a
-            href="https://linkedin.com/in/zoru"
+            href="https://linkedin.com/in/bishes-phukon"
             class="footer__link"
             target="_blank"
             rel="noopener"
             >LinkedIn</a
           >
-          <a href="assets/zoru-resume.pdf" class="footer__link" download
+          <a href="assets/bishes-resume.pdf" class="footer__link" download
             >Resume ↓</a
           >
         </div>
@@ -216,69 +236,159 @@
     <div class="modal" id="call-modal">
       <div class="modal__bg" id="modal-close-bg"></div>
       <div class="modal__card">
+        <button class="modal__close" id="modal-close-btn" aria-label="Close">
+          ✕
+        </button>
+        <span class="modal__label">/ Book a Call</span>
         <h3 class="modal__title">Let's hop on a call.</h3>
         <p class="modal__desc">
-          Drop your details below and I'll reach out with a few time slots.
+          Drop your details — I'll ping you with time slots within 24hrs.
         </p>
 
         <form id="modal-form">
-          <input
-            type="email"
-            class="form-input"
-            placeholder="Email address"
-            required
-          />
-          <input
-            type="tel"
-            class="form-input"
-            placeholder="Phone number"
-            required
-          />
+          <div class="form-row">
+            <input
+              type="email"
+              name="call_email"
+              class="form-input"
+              placeholder="Email address"
+              required
+            />
+            <input
+              type="tel"
+              name="call_phone"
+              class="form-input"
+              placeholder="Phone number"
+              required
+            />
+          </div>
           <button type="submit" class="cta-btn w-full" id="modal-submit-btn">
-            Request Call
+            Request Call →
           </button>
         </form>
 
         <div class="modal__success" id="modal-success">
           <span class="modal__check">✓</span>
-          <h4>Request Sent</h4>
-          <p>Talk to you soon.</p>
+          <h3 class="modal__success-title">Request logged.</h3>
+          <p class="modal__success-desc">Expect a ping within 24hrs.</p>
         </div>
       </div>
     </div>
 
     <script src="script.js"></script>
     <script>
-      // 1. Modal Logic
+      // ── EmailJS init (replace with your keys) ──
+      emailjs.init("RNN4aquocJcuJV6KC");
+
+      // ── Pill Toggle ──
+      document.querySelectorAll(".pill").forEach((pill) => {
+        pill.addEventListener("click", () => {
+          document
+            .querySelectorAll(".pill")
+            .forEach((p) => p.classList.remove("is-active"));
+          pill.classList.add("is-active");
+          document.getElementById("urgency-value").value = pill.dataset.value;
+        });
+      });
+
+      // ── Contact Form ──
+      const contactForm = document.getElementById("contact-form");
+      const formSuccess = document.getElementById("form-success");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const btn = contactForm.querySelector(".cta-btn");
+        btn.textContent = "Sending…";
+        btn.disabled = true;
+        btn.style.opacity = "0.6";
+        btn.style.cursor = "wait";
+
+        emailjs
+          .sendForm("service_6uh9nao", "template_0g5iekq", contactForm)
+          .then(() => {
+            contactForm.style.opacity = "0";
+            setTimeout(() => {
+              contactForm.style.display = "none";
+              formSuccess.style.display = "flex";
+              requestAnimationFrame(() =>
+                formSuccess.classList.add("is-active"),
+              );
+            }, 400);
+          })
+          .catch(() => {
+            btn.textContent = "Send message →";
+            btn.disabled = false;
+            btn.style.opacity = "1";
+            btn.style.cursor = "none";
+          });
+      }); // ── end submit handler
+
+      document
+        .getElementById("form-success-ok")
+        .addEventListener("click", () => {
+          formSuccess.classList.remove("is-active");
+          setTimeout(() => {
+            formSuccess.style.display = "none";
+            contactForm.reset();
+            document
+              .querySelectorAll(".pill")
+              .forEach((p) => p.classList.remove("is-active"));
+            document.getElementById("urgency-value").value = "";
+            const btn = contactForm.querySelector(".cta-btn");
+            btn.textContent = "Send message →";
+            btn.disabled = false;
+            btn.style.opacity = "1";
+            contactForm.style.display = "";
+            requestAnimationFrame(() => (contactForm.style.opacity = "1"));
+          }, 400);
+        });
+
+      // ── Modal ──
       const modal = document.getElementById("call-modal");
+      const closeModal = () => {
+        modal.classList.remove("is-active");
+      };
       document
         .getElementById("open-modal-btn")
         .addEventListener("click", () => modal.classList.add("is-active"));
       document
         .getElementById("modal-close-bg")
-        .addEventListener("click", () => modal.classList.remove("is-active"));
+        .addEventListener("click", closeModal);
+      document
+        .getElementById("modal-close-btn")
+        .addEventListener("click", closeModal);
+
       document.getElementById("modal-form").addEventListener("submit", (e) => {
         e.preventDefault();
-        document.getElementById("modal-success").classList.add("is-active");
-        setTimeout(() => {
-          modal.classList.remove("is-active");
-          document
-            .getElementById("modal-success")
-            .classList.remove("is-active");
-        }, 2800);
+        const btn = document.getElementById("modal-submit-btn");
+        btn.textContent = "Sending…";
+        btn.disabled = true;
+        btn.style.opacity = "0.6";
+
+        emailjs
+          .sendForm("service_6uh9nao", "template_45vp2ip", e.target)
+          .then(() => {
+            e.target.style.display = "none";
+            const success = document.getElementById("modal-success");
+            success.style.display = "flex";
+            requestAnimationFrame(() => success.classList.add("is-active"));
+            setTimeout(() => closeModal(), 3000);
+          })
+          .catch(() => {
+            btn.textContent = "Request Call →";
+            btn.disabled = false;
+            btn.style.opacity = "1";
+          });
       });
 
-      // 2. Emerging Card Parallax Logic
+      // ── Parallax ──
       const topSection = document.querySelector(".profile-top");
       const bottomSection = document.querySelector(".profile-bottom");
-
       window.addEventListener("scroll", () => {
         const bottomY = bottomSection.getBoundingClientRect().top;
         const vh = window.innerHeight;
-
         if (bottomY < vh) {
-          let progress = 1 - bottomY / vh;
-          progress = Math.max(0, Math.min(1, progress));
+          let progress = Math.max(0, Math.min(1, 1 - bottomY / vh));
           topSection.style.transform = `scale(${1 - progress * 0.05}) translateY(${progress * 30}px)`;
           topSection.style.opacity = 1 - progress * 0.4;
         } else {
@@ -287,7 +397,7 @@
         }
       });
 
-      // 3. Nav Active State Toggler (Smooth Observer)
+      // ── Nav Observer ──
       const profileLink = document.querySelector(
         'a[href="about.html"].nav__link',
       );
@@ -295,31 +405,21 @@
         'a[href="#contact"].nav__link',
       );
       const contactTarget = document.getElementById("contact");
-
-      // The observer watches the contact section without spamming the browser
-      const navObserver = new IntersectionObserver(
+      new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // We entered the contact section -> switch active states smoothly
-              profileLink.classList.remove("nav__link--active");
-              contactLink.classList.add("nav__link--active");
-            } else {
-              // We scrolled back up -> revert active states
-              contactLink.classList.remove("nav__link--active");
-              profileLink.classList.add("nav__link--active");
-            }
+            profileLink.classList.toggle(
+              "nav__link--active",
+              !entry.isIntersecting,
+            );
+            contactLink.classList.toggle(
+              "nav__link--active",
+              entry.isIntersecting,
+            );
           });
         },
-        {
-          // This triggers exactly when 40% of the contact card is visible on screen
-          threshold: 0.4,
-        },
-      );
-
-      if (contactTarget) {
-        navObserver.observe(contactTarget);
-      }
+        { threshold: 0.4 },
+      ).observe(contactTarget);
     </script>
   </body>
 </html>
